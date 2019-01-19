@@ -1,0 +1,50 @@
+{
+  "name": "@tyriar/circular-buffer",
+  "version": "2.0.9",
+  "description": "An implementation of the circular buffer data structure",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint --project .",
+    "test": "nyc -x lib/test mocha lib/test/*.test.js",
+    "test-report": "nyc --reporter html mocha lib/test/*.test.js",
+    "watch": "tsc -w",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gwtw/ts-circular-buffer.git"
+  },
+  "keywords": [
+    "buffer",
+    "circular buffer",
+    "computer science",
+    "data structure"
+  ],
+  "main": "./lib/circularBuffer.js",
+  "types": "typings/circular-buffer.d.ts",
+  "author": "Daniel Imms (http://www.growingwiththeweb.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gwtw/ts-circular-buffer/issues"
+  },
+  "homepage": "https://github.com/gwtw/ts-circular-buffer",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.2.0",
+    "nyc": "^11.4.1",
+    "tslint": "^5.9.1",
+    "tslint-consistent-codestyle": "^1.13.0",
+    "typescript": "3.2"
+  },
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.js.map",
+    "!lib/test",
+    "src/**/*.ts",
+    "!src/test",
+    "typings/*.d.ts"
+  ]
+}
