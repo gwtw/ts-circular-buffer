@@ -1,12 +1,7 @@
-// import { FibonacciHeap } from '../fibonacciHeap';
-// import { Node } from '../node';
+import { CircularBuffer } from '../circularBuffer';
 
-// export class TestFibonacciHeap<K, V> extends FibonacciHeap<K, V> {
-//   extractMinimumUnsafe(): Node<K, V> {
-//     return <Node<K, V>>this.extractMinimum();
-//   }
-
-//   findMinimumUnsafe(): Node<K, V> {
-//     return <Node<K, V>>this.findMinimum();
-//   }
-// }
+export class TestCircularBuffer extends CircularBuffer {
+  public get data(): Uint32Array { return this._data; }
+  public get start(): number { return this._start; }
+  public get length(): number { return this._length; }
+}
